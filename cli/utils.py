@@ -151,7 +151,14 @@ def select_openrouter_model() -> str:
     """Select an OpenRouter model from the newest available, or enter a custom ID."""
     models = _fetch_openrouter_models()
 
-    choices = [questionary.Choice(name, value=mid) for name, mid in models[:5]]
+    # Add cheaper models that support tool use as top choices
+    cheap_choices = [
+        questionary.Choice("OpenAI GPT-5.4 Mini (Cheap, supports tools)", "openai/gpt-5.4-mini"),
+        questionary.Choice("OpenAI GPT-5.4 Nano (Very cheap, supports tools)", "openai/gpt-5.4-nano"),
+        questionary.Choice("Anthropic Claude Haiku 4.5 (Cheap, supports tools)", "anthropic/claude-haiku-4-5"),
+    ]
+    
+    choices = cheap_choices + [questionary.Choice(name, value=mid) for name, mid in models[:5]]
     choices.append(questionary.Choice("Custom model ID", value="custom"))
 
     choice = questionary.select(

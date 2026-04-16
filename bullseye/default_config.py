@@ -11,6 +11,7 @@ DEFAULT_CONFIG = {
     "deep_think_llm": "gpt-5.4",
     "quick_think_llm": "gpt-5.4-mini",
     "backend_url": "https://api.openai.com/v1",
+    "max_tokens": 200,  # Limit to fit very low-credit accounts
     # Provider-specific thinking configuration
     "google_thinking_level": None,      # "high", "minimal", etc.
     "openai_reasoning_effort": None,    # "medium", "high", "low"

@@ -136,6 +136,10 @@ class BullseyeGraph:
         kwargs = {}
         provider = self.config.get("llm_provider", "").lower()
 
+        # Common kwargs for all providers
+        if "max_tokens" in self.config:
+            kwargs["max_tokens"] = self.config["max_tokens"]
+
         if provider == "google":
             thinking_level = self.config.get("google_thinking_level")
             if thinking_level:
