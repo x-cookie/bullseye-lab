@@ -1,11 +1,11 @@
-# TradingAgents/graph/setup.py
+# Bullseye/graph/setup.py
 
 from typing import Any, Dict
 from langgraph.graph import END, START, StateGraph
 from langgraph.prebuilt import ToolNode
 
-from tradingagents.agents import *
-from tradingagents.agents.utils.agent_states import AgentState
+from bullseye.agents import *
+from bullseye.agents.utils.agent_states import AgentState
 
 from .conditional_logic import ConditionalLogic
 

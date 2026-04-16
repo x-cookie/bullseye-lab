@@ -1,4 +1,4 @@
-from tradingagents.agents.utils.agent_utils import build_instrument_context, get_language_instruction
+from bullseye.agents.utils.agent_utils import build_instrument_context, get_language_instruction
 
 
 def create_portfolio_manager(llm, memory):

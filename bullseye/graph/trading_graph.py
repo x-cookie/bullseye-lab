@@ -1,4 +1,4 @@
-# TradingAgents/graph/trading_graph.py
+# Bullseye/graph/trading_graph.py
 
 import os
 from pathlib import Path
@@ -8,20 +8,20 @@ from typing import Dict, Any, Tuple, List, Optional
 
 from langgraph.prebuilt import ToolNode
 
-from tradingagents.llm_clients import create_llm_client
+from bullseye.llm_clients import create_llm_client
 
-from tradingagents.agents import *
-from tradingagents.default_config import DEFAULT_CONFIG
-from tradingagents.agents.utils.memory import FinancialSituationMemory
-from tradingagents.agents.utils.agent_states import (
+from bullseye.agents import *
+from bullseye.default_config import DEFAULT_CONFIG
+from bullseye.agents.utils.memory import FinancialSituationMemory
+from bullseye.agents.utils.agent_states import (
     AgentState,
     InvestDebateState,
     RiskDebateState,
 )
-from tradingagents.dataflows.config import set_config
+from bullseye.dataflows.config import set_config
 
 # Import the new abstract tool methods from agent_utils
-from tradingagents.agents.utils.agent_utils import (
+from bullseye.agents.utils.agent_utils import (
     get_stock_data,
     get_indicators,
     get_fundamentals,
@@ -40,7 +40,7 @@ from .reflection import Reflector
 from .signal_processing import SignalProcessor
 
 
-class TradingAgentsGraph:
+class BullseyeGraph:
     """Main class that orchestrates the trading agents framework."""
 
     def __init__(
@@ -257,7 +257,7 @@ class TradingAgentsGraph:
         }
 
         # Save to file
-        directory = Path(self.config["results_dir"]) / self.ticker / "TradingAgentsStrategy_logs"
+        directory = Path(self.config["results_dir"]) / self.ticker / "BullseyeStrategy_logs"
         directory.mkdir(parents=True, exist_ok=True)
 
         log_path = directory / f"full_states_log_{trade_date}.json"

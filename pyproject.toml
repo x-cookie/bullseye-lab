@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tradingagents"
+name = "bullseye"
 version = "0.2.3"
-description = "TradingAgents: Multi-Agents LLM Financial Trading Framework"
+description = "Bullseye: Multi-Agents LLM Financial Trading Framework"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -33,10 +33,10 @@ dependencies = [
 ]
 
 [project.scripts]
-tradingagents = "cli.main:app"
+bullseye = "cli.main:app"
 
 [tool.setuptools.packages.find]
-include = ["tradingagents*", "cli*"]
+include = ["bullseye*", "cli*"]
 
 [tool.setuptools.package-data]
 cli = ["static/*"]

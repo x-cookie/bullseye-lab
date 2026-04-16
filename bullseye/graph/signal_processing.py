@@ -1,4 +1,4 @@
-# TradingAgents/graph/signal_processing.py
+# Bullseye/graph/signal_processing.py
 
 from typing import Any
 

@@ -1,6 +1,6 @@
 import functools
 
-from tradingagents.agents.utils.agent_utils import build_instrument_context
+from bullseye.agents.utils.agent_utils import build_instrument_context
 
 
 def create_trader(llm, memory):

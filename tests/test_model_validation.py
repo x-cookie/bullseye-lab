@@ -1,9 +1,9 @@
 import unittest
 import warnings
 
-from tradingagents.llm_clients.base_client import BaseLLMClient
-from tradingagents.llm_clients.model_catalog import get_known_models
-from tradingagents.llm_clients.validators import validate_model
+from bullseye.llm_clients.base_client import BaseLLMClient
+from bullseye.llm_clients.model_catalog import get_known_models
+from bullseye.llm_clients.validators import validate_model
 
 
 class DummyLLMClient(BaseLLMClient):

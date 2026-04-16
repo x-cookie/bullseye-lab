@@ -1,7 +1,7 @@
-# TradingAgents/graph/propagation.py
+# Bullseye/graph/propagation.py
 
 from typing import Dict, Any, List, Optional
-from tradingagents.agents.utils.agent_states import (
+from bullseye.agents.utils.agent_states import (
     AgentState,
     InvestDebateState,
     RiskDebateState,

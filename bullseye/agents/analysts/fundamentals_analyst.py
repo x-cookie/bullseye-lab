@@ -1,21 +1,33 @@
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from tradingagents.agents.utils.agent_utils import build_instrument_context, get_language_instruction, get_news
-from tradingagents.dataflows.config import get_config
+from bullseye.agents.utils.agent_utils import (
+    build_instrument_context,
+    get_balance_sheet,
+    get_cashflow,
+    get_fundamentals,
+    get_income_statement,
+    get_insider_transactions,
+    get_language_instruction,
+)
+from bullseye.dataflows.config import get_config
 
 
-def create_social_media_analyst(llm):
-    def social_media_analyst_node(state):
+def create_fundamentals_analyst(llm):
+    def fundamentals_analyst_node(state):
         current_date = state["trade_date"]
         instrument_context = build_instrument_context(state["company_of_interest"])
 
         tools = [
-            get_news,
+            get_fundamentals,
+            get_balance_sheet,
+            get_cashflow,
+            get_income_statement,
         ]
 
         system_message = (
-            "You are a social media and company specific news researcher/analyst tasked with analyzing social media posts, recent company news, and public sentiment for a specific company over the past week. You will be given a company's name your objective is to write a comprehensive long report detailing your analysis, insights, and implications for traders and investors on this company's current state after looking at social media and what people are saying about that company, analyzing sentiment data of what people feel each day about the company, and looking at recent company news. Use the get_news(query, start_date, end_date) tool to search for company-specific news and social media discussions. Try to look at all sources possible from social media to sentiment to news. Provide specific, actionable insights with supporting evidence to help traders make informed decisions."
-            + """ Make sure to append a Markdown table at the end of the report to organize key points in the report, organized and easy to read."""
-            + get_language_instruction()
+            "You are a researcher tasked with analyzing fundamental information over the past week about a company. Please write a comprehensive report of the company's fundamental information such as financial documents, company profile, basic company financials, and company financial history to gain a full view of the company's fundamental information to inform traders. Make sure to include as much detail as possible. Provide specific, actionable insights with supporting evidence to help traders make informed decisions."
+            + " Make sure to append a Markdown table at the end of the report to organize key points in the report, organized and easy to read."
+            + " Use the available tools: `get_fundamentals` for comprehensive company analysis, `get_balance_sheet`, `get_cashflow`, and `get_income_statement` for specific financial statements."
+            + get_language_instruction(),
         )
 
         prompt = ChatPromptTemplate.from_messages(
@@ -51,7 +63,7 @@ def create_social_media_analyst(llm):
 
         return {
             "messages": [result],
-            "sentiment_report": report,
+            "fundamentals_report": report,
         }
 
-    return social_media_analyst_node
+    return fundamentals_analyst_node
