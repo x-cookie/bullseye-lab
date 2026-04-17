@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/cookie-may.png" style="width: 60%; height: auto;">
+  <img src="assets/cookie-may.jpeg" style="width: 60%; height: auto;">
 </p>
 
 <div align="center" style="line-height: 1;">
@@ -33,15 +33,6 @@
 - [2026-02] **Bullseye v0.2.0** released with multi-provider LLM support (GPT-5.x, Gemini 3.x, Claude 4.x, Grok 4.x) and improved system architecture.
 - [2026-01] **Trading-R1** [Technical Report](https://arxiv.org/abs/2509.11420) released, with [Terminal](https://github.com/cookie-may/Trading-R1) expected to land soon.
 
-<div align="center">
-<a href="https://www.star-history.com/#cookie-may/Bullseye&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=cookie-may/Bullseye&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=cookie-may/Bullseye&type=Date" />
-   <img alt="Bullseye Star History" src="https://api.star-history.com/svg?repos=cookie-may/Bullseye&type=Date" style="width: 80%; height: auto;" />
- </picture>
-</a>
-</div>
 
 > 🎉 **Bullseye** officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
 >
@@ -49,7 +40,7 @@
 
 <div align="center">
 
-🚀 [Bullseye](#bullseye-framework) | ⚡ [Installation & CLI](#installation-and-cli) | 🎬 [Demo](https://www.youtube.com/watch?v=90gr5lwjIho) | 📦 [Package Usage](#bullseye-package) | 🤝 [Contributing](#contributing) | 📄 [Citation](#citation)
+🚀 [Bullseye](#bullseye-framework) | ⚡ [Installation & CLI](#installation-and-cli) | 📦 [Package Usage](#bullseye-package) | 🤝 [Contributing](#contributing) | 📄 [Citation](#citation)
 
 </div>
 

@@ -1,4 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.messages import ToolMessage
 from bullseye.agents.utils.agent_utils import (
     build_instrument_context,
     get_indicators,
@@ -72,12 +73,11 @@ Volume-Based Indicators:
         prompt = prompt.partial(instrument_context=instrument_context)
 
         chain = prompt | llm.bind_tools(tools)
-
         result = chain.invoke(state["messages"])
 
         report = ""
 
-        if len(result.tool_calls) == 0:
+        if len(getattr(result, 'tool_calls', [])) == 0:
             report = result.content
 
         return {

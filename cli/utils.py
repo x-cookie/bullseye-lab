@@ -153,9 +153,9 @@ def select_openrouter_model() -> str:
 
     # Add cheaper models that support tool use as top choices
     cheap_choices = [
-        questionary.Choice("OpenAI GPT-5.4 Mini (Cheap, supports tools)", "openai/gpt-5.4-mini"),
-        questionary.Choice("OpenAI GPT-5.4 Nano (Very cheap, supports tools)", "openai/gpt-5.4-nano"),
-        questionary.Choice("Anthropic Claude Haiku 4.5 (Cheap, supports tools)", "anthropic/claude-haiku-4-5"),
+        questionary.Choice("Anthropic Claude 3.5 Sonnet (Reliable tools)", "anthropic/claude-3.5-sonnet"),
+        questionary.Choice("Google Gemini 2.5 Flash (Fast, supports tools)", "google/gemini-2.5-flash"),
+        questionary.Choice("Anthropic Claude 3 Haiku (Cheap, supports tools)", "anthropic/claude-3-haiku"),
     ]
     
     choices = cheap_choices + [questionary.Choice(name, value=mid) for name, mid in models[:5]]
