@@ -5,10 +5,9 @@
 <div align="center" style="line-height: 1;">
   <a href="https://arxiv.org/abs/2412.20138" target="_blank"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv"/></a>
   <a href="https://discord.com/invite/hk9PGKShPK" target="_blank"><img alt="Discord" src="https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da"/></a>
-  <a href="./assets/wechat.png" target="_blank"><img alt="WeChat" src="https://img.shields.io/badge/WeChat-cookie-may-brightgreen?logo=wechat&logoColor=white"/></a>
-  <a href="https://x.com/cookie-may" target="_blank"><img alt="X Follow" src="https://img.shields.io/badge/X-cookie-may-white?logo=x&logoColor=white"/></a>
-  <br>
-  <a href="https://github.com/cookie-may/" target="_blank"><img alt="Community" src="https://img.shields.io/badge/Join_GitHub_Community-cookie-may-14C290?logo=discourse"/></a>
+  <a href="https://github.com/cookie-may/Bullseye" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-cookie--may/Bullseye-181717?logo=github"/></a>
+  <a href="https://github.com/cookie-may/Bullseye/blob/main/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/github/license/cookie-may/Bullseye"/></a>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white"/>
 </div>
 
 <div align="center">
@@ -27,11 +26,16 @@
 
 # Bullseye: Multi-Agents LLM Financial Trading Framework
 
+
+X : https://x.com/bullseyelabsx
+
+CA: [TBD]
+
 ## News
 - [2026-03] **Bullseye v0.2.3** released with multi-language support, GPT-5.4 family models, unified model catalog, backtesting date fidelity, and proxy support.
 - [2026-03] **Bullseye v0.2.2** released with GPT-5.4/Gemini 3.1/Claude 4.6 model coverage, five-tier rating scale, OpenAI Responses API, Anthropic effort control, and cross-platform stability.
 - [2026-02] **Bullseye v0.2.0** released with multi-provider LLM support (GPT-5.x, Gemini 3.x, Claude 4.x, Grok 4.x) and improved system architecture.
-- [2026-01] **Trading-R1** [Technical Report](https://arxiv.org/abs/2509.11420) released, with [Terminal](https://github.com/cookie-may/Trading-R1) expected to land soon.
+- [2026-01] **Trading-R1** Terminal expected to land soon.
 
 
 > 🎉 **Bullseye** officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
@@ -51,6 +55,20 @@ Bullseye is a multi-agent trading framework that mirrors the dynamics of real-wo
 <p align="center">
   <img src="assets/schema.png" style="width: 100%; height: auto;">
 </p>
+
+## Features
+
+- **Multi-Agent Architecture**: Specialized LLM agents (Fundamentals, Sentiment, News, Technical analysts) collaborate like a real trading firm
+- **Bull vs. Bear Debates**: Bullish and bearish researchers engage in structured adversarial rounds before any trade decision is made
+- **Multi-Provider LLM Support**: Plug in OpenAI, Anthropic, Google Gemini, xAI Grok, DeepSeek, Qwen, GLM, OpenRouter, or local Ollama models — swap with one config line
+- **Dual-Speed LLM Routing**: Assign a powerful deep_think_llm for complex reasoning and a lighter quick_think_llm for fast tasks — balancing quality and cost
+- **Flexible Data Vendors**: Switch between yfinance and Alpha Vantage per data category (fundamentals, news, technicals) without changing code
+- **Backtesting Engine**: Replay decisions against historical market data with date-accurate fidelity via Backtrader integration
+- **Interactive CLI & TUI**: Rich terminal UI lets you select tickers, dates, LLM provider, and research depth interactively
+- **Risk Management Layer**: Dedicated risk team evaluates volatility and liquidity before a Portfolio Manager gives final trade approval
+- **Docker & Ollama Support**: Run fully containerized, with a dedicated Ollama profile for fully local, offline operation
+- **Enterprise Provider Support**: Azure OpenAI and AWS Bedrock via .env.enterprise config
+- **Research-Grade & Citable**: Based on peer-reviewed arXiv paper (2412.20138) with full open-source code
 
 > Bullseye framework is designed for research purposes. Trading performance may vary based on many factors, including the chosen backbone language models, model temperature, trading periods, the quality of data, and other non-deterministic factors. [It is not intended as financial, investment, or trading advice.](https://cookie-may.ai/disclaimer/)
 
@@ -94,8 +112,8 @@ Our framework decomposes complex trading tasks into specialized roles. This ensu
 
 Clone Bullseye:
 ```bash
-git clone https://github.com/cookie-may/Bullseye.git
-cd Bullseye
+git clone https://github.com/cookie-may/bullseye-lab
+cd bullseye-lab
 ```
 
 Create a virtual environment in any of your favorite environment managers:
