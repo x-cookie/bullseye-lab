@@ -29,7 +29,7 @@
 
 X : https://x.com/bullseyelabsx
 
-CA: [TBD]
+CA: 4U4h8GtSWt9thRHbUQ863RbgpQ2fzFqdUqi5GAPkpump
 
 ## News
 - [2026-03] **Bullseye v0.2.3** released with multi-language support, GPT-5.4 family models, unified model catalog, backtesting date fidelity, and proxy support.
